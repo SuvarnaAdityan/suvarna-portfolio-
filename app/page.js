@@ -1,4 +1,18 @@
 export default function SuvarnaPortfolio() {
+  const certifications = [
+    {
+      title: "The Complete Tableau Bootcamp for Aspiring Data Scientists",
+      provider: "Coursera",
+      description:
+        "Hands-on experience in data visualization, dashboard creation, charts, filters, and business analytics using Tableau.",
+    },
+  ];
+
+  
+
+  const resumeLink = "/resume.pdf";
+
+  const [darkMode, setDarkMode] = React.useState(false);
   const skills = {
     languages: ["HTML", "CSS", "JavaScript", "C", "C++", "Python", "Java"],
     frameworks: ["Git", "Eclipse", "NumPy", "pandas", "Matplotlib", "PyTorch", "TensorFlow", "Keras", "Scikit-learn"],
@@ -53,14 +67,24 @@ export default function SuvarnaPortfolio() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
+    <div className={darkMode ? "min-h-screen bg-slate-950 text-white transition-all duration-500" : "min-h-screen bg-gray-100 text-gray-800 transition-all duration-500"}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-slate-900 to-slate-700 text-white py-16 px-6">
+      <section className="bg-gradient-to-r from-slate-900 to-slate-700 text-white py-16 px-6 animate-fadeIn">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
+            <div className="flex justify-between items-center mb-6">
+              <div></div>
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className="bg-white/20 px-4 py-2 rounded-xl text-sm hover:scale-105 transition"
+              >
+                {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+              </button>
+            </div>
+
             <h1 className="text-5xl font-bold mb-4">Suvarna Ramu</h1>
             <p className="text-xl mb-6 text-gray-200">
-              Software Developer | Frontend Developer | AI/ML Enthusiast
+              Software Engineer specializing in Frontend Development, QA Testing, and Machine Learning
             </p>
             <p className="leading-relaxed text-gray-300">
               Computer Engineering graduate with expertise in frontend development,
@@ -77,13 +101,37 @@ export default function SuvarnaPortfolio() {
               </a>
 
               <a
+                href={resumeLink}
+                download
+                className="bg-blue-500 text-white px-5 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
+              >
+                Download Resume
+              </a>
+
+              
+
+              <a
                 href="https://www.linkedin.com/in/suvarnaramu"
                 target="_blank"
                 className="border border-white px-5 py-3 rounded-2xl font-semibold hover:bg-white hover:text-slate-900 transition"
               >
                 LinkedIn
               </a>
-            </div>
+
+            <a
+              href="tel:+15715551234"
+              className="border border-white px-5 py-3 rounded-2xl font-semibold"
+            >
+              Call Me
+            </a>
+          </div>
+
+          <div className="mt-8 text-gray-300 space-y-2">
+            <p>Email: suvarnaadityan@gmail.com</p>
+            <p>Location: Manassas, Virginia, USA</p>
+            <p>LinkedIn: linkedin.com/in/suvarnaramu</p>
+            <p>GitHub: github.com/SuvarnaAdityan</p>
+          </div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl">
@@ -203,7 +251,7 @@ export default function SuvarnaPortfolio() {
       </section>
 
       {/* Projects */}
-      <section className="bg-slate-900 text-white py-16 px-6">
+      <section className="bg-slate-900 text-white py-16 px-6 animate-pulse">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-10">Projects</h2>
 
@@ -214,9 +262,11 @@ export default function SuvarnaPortfolio() {
                 className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/10"
               >
                 <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed mb-6">
                   {project.description}
                 </p>
+
+                
               </div>
             ))}
           </div>
@@ -278,7 +328,33 @@ export default function SuvarnaPortfolio() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Certifications */}
+      <section className="max-w-6xl mx-auto py-16 px-6">
+        <h2 className="text-3xl font-bold mb-10">Certifications</h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {certifications.map((cert) => (
+            <div
+              key={cert.title}
+              className="bg-white p-8 rounded-3xl shadow-lg hover:scale-105 transition duration-300"
+            >
+              <h3 className="text-2xl font-semibold mb-3 text-slate-900">
+                {cert.title}
+              </h3>
+
+              <p className="text-blue-600 font-medium mb-4">
+                {cert.provider}
+              </p>
+
+              <p className="text-gray-700 leading-relaxed">
+                {cert.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}}
       <footer className="bg-slate-950 text-white py-10 px-6 mt-10">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4">Let’s Connect</h2>
