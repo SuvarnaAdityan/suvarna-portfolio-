@@ -2,235 +2,253 @@
 import React from "react";
 
 export default function SuvarnaPortfolio() {
-  const [darkMode, setDarkMode] = React.useState(false);
-
-  const skills = {
-    languages: ["HTML", "CSS", "JavaScript", "Python", "Java", "C++"],
-    frameworks: [
-      "React",
-      "Next.js",
-      "TensorFlow",
-      "PyTorch",
-      "NumPy",
-      "pandas",
-      "Scikit-learn",
-    ],
-    tools: ["Git", "Tableau", "SQL", "Linux", "Eclipse"],
-  };
-
   const certifications = [
     {
       title: "The Complete Tableau Bootcamp for Aspiring Data Scientists",
       provider: "Coursera",
       description:
-        "Hands-on experience in data visualization, dashboard creation, and business analytics using Tableau.",
+        "Hands-on experience in data visualization, dashboard creation, charts, filters, and business analytics using Tableau.",
     },
   ];
+
+  
+
+  const resumeLink = "/resume.pdf";
+
+  const [darkMode, setDarkMode] = React.useState(false);
+  const skills = {
+    languages: ["HTML", "CSS", "JavaScript", "C", "C++", "Python", "Java"],
+    frameworks: ["Git", "Eclipse", "NumPy", "pandas", "Matplotlib", "PyTorch", "TensorFlow", "Keras", "Scikit-learn"],
+    databases: ["SQL", "Python Data Querying"],
+    systems: ["Windows", "Linux"],
+  };
 
   const experiences = [
     {
       title: "Software Developer",
       company: "SSSN Software Pvt. Ltd",
       duration: "2022 – 2023",
-      points: [
-        "Developed Android messaging applications and improved system performance by 20%.",
-        "Collaborated with UI/UX teams to enhance user experience and responsiveness.",
-        "Built testing frameworks improving application reliability and stability.",
-      ],
+      achievements: [
+        "Developed an Android messaging application and improved overall system architecture using Eclipse.",
+        "Improved system performance by 20% through code optimization and debugging.",
+        "Collaborated with UX/UI teams to create responsive and user-friendly designs.",
+        "Increased user satisfaction by 25% with enhanced UI improvements.",
+        "Built and executed unit testing frameworks to improve application stability and reliability."
+      ]
     },
     {
       title: "Software Test Engineer",
       company: "Qualcomm",
       duration: "2021 – 2022",
-      points: [
-        "Performed manual and automated testing to improve product quality.",
-        "Reduced failure rates by 15% through detailed hardware and software analysis.",
-        "Improved product reliability and testing efficiency.",
-      ],
-    },
+      achievements: [
+        "Performed manual and automated testing to improve product reliability.",
+        "Improved product quality by 30% by identifying and fixing connection failures.",
+        "Provided qualification support for memory chips using PINE and RDX boards.",
+        "Reduced failure rates by 15% through detailed testing and analysis."
+      ]
+    }
   ];
 
   const projects = [
     {
-      title: "Credit Card Fraud Detection using Deep Learning",
+      title: "Credit Card Fraud Detection using Deep Learning Techniques",
       description:
-        "Developed a fraud detection system using Autoencoders and RBM models achieving up to 99% prediction accuracy.",
+        "Built a backend fraud detection system with a web interface using Python and deep learning models. Achieved 96%–99% prediction accuracy using Auto-encoders and RBM algorithms."
     },
     {
       title: "Social Network Analysis Using Centrality Measures",
       description:
-        "Built interactive network visualizations improving analytical efficiency and user engagement.",
-    },
+        "Created an interactive web application for social network visualization using JavaScript libraries and improved data processing efficiency by 15 hours per month."
+    }
+  ];
+
+  const publications = [
+    "Review of Feature Selection Methods and Semi Supervised Feature Selection Algorithms for Classification",
+    "Context Aware Physical Activity Recognition Using Social Objects",
+    "Credit Card Fraud Detection Using Federated Learning Techniques",
+    "Critical Care Monitoring with Event Prioritization Using IoT"
   ];
 
   return (
-    <div
-      className={
-        darkMode
-          ? "min-h-screen bg-slate-950 text-white transition-all duration-500"
-          : "min-h-screen bg-gray-100 text-gray-800 transition-all duration-500"
-      }
-    >
-      {/* HERO SECTION */}
-      <section className="bg-gradient-to-r from-slate-950 to-slate-800 text-white py-20 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div className={darkMode ? "min-h-screen bg-slate-950 text-white transition-all duration-500" : "min-h-screen bg-gray-100 text-gray-800 transition-all duration-500"}>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-slate-900 to-slate-700 text-white py-16 px-6 animate-fadeIn">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <div className="flex justify-end mb-6">
+            <div className="flex justify-between items-center mb-6">
+              <div></div>
               <button
                 onClick={() => setDarkMode(!darkMode)}
-                className="bg-white/20 px-4 py-2 rounded-xl hover:scale-105 transition"
+                className="bg-white/20 px-4 py-2 rounded-xl text-sm hover:scale-105 transition"
               >
                 {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
               </button>
             </div>
 
-            <h1 className="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
+            <h1 className="text-6xl md:text-7xl font-extrabold mb-4 leading-tight tracking-tight">
               Suvarna Ramu
             </h1>
-
-            <p className="text-2xl text-gray-300 mb-6">
-              Software Engineer | Frontend Developer | AI/ML Enthusiast
+            <p className="text-xl mb-6 text-gray-200">
+              Software Engineer focused on building scalable applications, responsive user experiences, and AI-driven solutions
+            </p>
+            <p className="leading-relaxed text-gray-300">
+              Results-driven Software Engineer with professional experience in software development, quality assurance, and machine learning. Passionate about creating high-performance applications, improving user experience, and solving complex technical challenges with modern technologies.
             </p>
 
-            <p className="text-lg leading-relaxed text-gray-300 max-w-2xl">
-              Results-driven Software Engineer with experience in software
-              development, QA testing, frontend engineering, and machine
-              learning. Passionate about building scalable applications and
-              solving complex technical challenges.
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="mailto:suvarnaadityan@gmail.com"
-                className="bg-white text-slate-900 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
+                href="mailto:suvarnaadityan@gmail.com?subject=Job%20Opportunity&body=Hello%20Suvarna,"
+                className="bg-white text-slate-900 px-5 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
               >
                 Contact Me
               </a>
 
               <a
-                href="/resume.pdf"
+                href={resumeLink}
                 download
-                className="bg-blue-500 text-white px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
+                className="bg-blue-500 text-white px-5 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
               >
                 Download Resume
               </a>
 
+              
+
               <a
                 href="https://www.linkedin.com/in/suvarnaramu"
                 target="_blank"
-                className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-slate-900 transition"
+                className="border border-white px-5 py-3 rounded-2xl font-semibold hover:bg-white hover:text-slate-900 transition"
               >
                 LinkedIn
               </a>
-            </div>
+
+            <a
+              href="tel:+15715551234"
+              className="border border-white px-5 py-3 rounded-2xl font-semibold"
+            >
+              Call Me
+            </a>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-10 border border-white/10 shadow-2xl hover:scale-105 transition duration-500">
-            <h2 className="text-3xl font-bold mb-8">Quick Overview</h2>
+          <div className="mt-8 text-gray-300 space-y-2">
+            <p>
+              Email:
+              <a
+                href="mailto:suvarnaadityan@gmail.com?subject=Job%20Opportunity&body=Hello%20Suvarna,"
+                className="text-blue-300 hover:underline ml-2"
+              >
+                suvarnaadityan@gmail.com
+              </a>
+            </p>
+            <p>
+              Phone:
+              <a
+                href="tel:+15715551234"
+                className="text-blue-300 hover:underline ml-2"
+              >
+                +1 (571) 555-1234
+              </a>
+            </p>
+            <p>Address: 8401 Rosebay Ln, Manassas, Virginia, USA</p>
+            <p>
+              LinkedIn:
+              <a
+                href="https://www.linkedin.com/in/suvarnaramu"
+                target="_blank"
+                className="text-blue-300 hover:underline ml-2"
+              >
+                linkedin.com/in/suvarnaramu
+              </a>
+            </p>
+          </div>
+          </div>
 
-            <div className="space-y-5 text-lg">
+          <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/10 hover:scale-105 transition duration-500">
+            <h2 className="text-2xl font-semibold mb-6">Quick Overview</h2>
+            <div className="space-y-4 text-gray-200">
               <div>
-                <span className="font-semibold">Location:</span> Manassas,
-                Virginia, USA
+                <span className="font-semibold text-white">Location:</span> Manassas, Virginia, USA
               </div>
-
               <div>
-                <span className="font-semibold">Education:</span> M.S.
-                Computer Science and Engineering
+                <span className="font-semibold text-white">Education:</span> M.S. Computer Science and Engineering
               </div>
-
               <div>
-                <span className="font-semibold">University:</span> George Mason
-                University
+                <span className="font-semibold text-white">University:</span> George Mason University
               </div>
-
               <div>
-                <span className="font-semibold">GPA:</span> 3.4 / 4.0
+                <span className="font-semibold text-white">GPA:</span> 3.54 / 4.0
               </div>
-
               <div>
-                <span className="font-semibold">Actively Seeking:</span>{" "}
-                Software Engineering, Frontend Development, QA Automation, and
-                AI/ML opportunities across the United States
+                <span className="font-semibold text-white">Actively Seeking:</span> Software Engineering, Frontend Development, QA Automation, and AI/ML opportunities across the United States
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="max-w-7xl mx-auto py-20 px-6">
-        <div className="bg-white rounded-3xl shadow-xl p-10 hover:-translate-y-2 transition duration-300">
-          <h2 className="text-4xl font-bold mb-6">About Me</h2>
-
+      {/* About */}
+      <section className="max-w-6xl mx-auto py-16 px-6">
+        <div className="bg-white rounded-3xl shadow-lg p-10">
+          <h2 className="text-3xl font-bold mb-6">About Me</h2>
           <p className="text-lg leading-relaxed text-gray-700">
-            I am a highly motivated Software Engineer with industry experience
-            in software development, QA testing, frontend engineering, and
-            AI/ML applications. My background combines strong technical
-            expertise with problem-solving skills, allowing me to build
-            efficient and user-focused applications.
+            I am a highly motivated Software Engineer with industry experience in software development, QA testing, frontend engineering, and AI/ML applications. My background combines strong technical expertise with problem-solving skills, allowing me to build efficient, user-focused applications that improve performance and reliability. I enjoy collaborating in fast-paced environments and continuously learning modern technologies to deliver impactful solutions.
           </p>
         </div>
       </section>
 
-      {/* SKILLS */}
-      <section className="max-w-7xl mx-auto py-10 px-6">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-10">
+      {/* Skills */}
+      <section className="max-w-6xl mx-auto py-10 px-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
           <div>
             <h2 className="text-4xl font-bold">Technical Skills</h2>
-
             <p className="text-gray-500 mt-2 text-lg">
-              Technologies and tools used to build modern applications.
+              Technologies and tools used to build scalable and modern applications.
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-2xl font-semibold shadow-lg">
+          <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold">
             Open to Full-Time Opportunities
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-6">Languages</h3>
-
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300 border border-gray-100">
+            <h3 className="text-xl font-semibold mb-4">Languages</h3>
             <div className="flex flex-wrap gap-3">
               {skills.languages.map((skill) => (
-                <span
-                  key={skill}
-                  className="bg-slate-100 px-4 py-2 rounded-full"
-                >
+                <span key={skill} className="bg-slate-100 px-4 py-2 rounded-full">
                   {skill}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-6">
-              Frameworks & Libraries
-            </h3>
-
+          <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300 border border-gray-100">
+            <h3 className="text-xl font-semibold mb-4">Frameworks & Tools</h3>
             <div className="flex flex-wrap gap-3">
               {skills.frameworks.map((skill) => (
-                <span
-                  key={skill}
-                  className="bg-slate-100 px-4 py-2 rounded-full"
-                >
+                <span key={skill} className="bg-slate-100 px-4 py-2 rounded-full">
                   {skill}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-6">Tools</h3>
-
+          <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300 border border-gray-100">
+            <h3 className="text-xl font-semibold mb-4">Database Skills</h3>
             <div className="flex flex-wrap gap-3">
-              {skills.tools.map((skill) => (
-                <span
-                  key={skill}
-                  className="bg-slate-100 px-4 py-2 rounded-full"
-                >
+              {skills.databases.map((skill) => (
+                <span key={skill} className="bg-slate-100 px-4 py-2 rounded-full">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300 border border-gray-100">
+            <h3 className="text-xl font-semibold mb-4">Operating Systems</h3>
+            <div className="flex flex-wrap gap-3">
+              {skills.systems.map((skill) => (
+                <span key={skill} className="bg-slate-100 px-4 py-2 rounded-full">
                   {skill}
                 </span>
               ))}
@@ -239,40 +257,31 @@ export default function SuvarnaPortfolio() {
         </div>
       </section>
 
-      {/* EXPERIENCE */}
-      <section className="max-w-7xl mx-auto py-20 px-6">
+      {/* Experience */}
+      <section className="max-w-6xl mx-auto py-16 px-6">
         <div className="mb-10">
-          <h2 className="text-4xl font-bold mb-3">
-            Professional Experience
-          </h2>
-
+          <h2 className="text-4xl font-bold mb-3">Professional Experience</h2>
           <p className="text-gray-500 text-lg">
-            Industry experience focused on development, testing, and
-            optimization.
+            Industry experience focused on application development, testing, and performance optimization.
           </p>
         </div>
 
         <div className="space-y-8">
           {experiences.map((exp) => (
-            <div
-              key={exp.title}
-              className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300"
-            >
-              <div className="flex flex-col md:flex-row md:justify-between mb-4">
+            <div key={exp.title} className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300 border border-gray-100">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                 <div>
-                  <h3 className="text-3xl font-semibold">{exp.title}</h3>
-
+                  <h3 className="text-2xl font-semibold">{exp.title}</h3>
                   <p className="text-lg text-gray-600">{exp.company}</p>
                 </div>
-
-                <div className="text-gray-500 font-medium">
+                <span className="text-gray-500 font-medium mt-2 md:mt-0">
                   {exp.duration}
-                </div>
+                </span>
               </div>
 
-              <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                {exp.points.map((point) => (
-                  <li key={point}>{point}</li>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                {exp.achievements.map((item) => (
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
             </div>
@@ -280,15 +289,13 @@ export default function SuvarnaPortfolio() {
         </div>
       </section>
 
-      {/* PROJECTS */}
+      {/* Projects */}
       <section className="bg-gradient-to-r from-slate-950 to-slate-800 text-white py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-12 text-center">
             <h2 className="text-5xl font-bold mb-4">Featured Projects</h2>
-
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Real-world projects demonstrating expertise in AI, data
-              visualization, and software engineering.
+              Real-world projects demonstrating expertise in machine learning, data visualization, web technologies, and software engineering.
             </p>
           </div>
 
@@ -298,30 +305,91 @@ export default function SuvarnaPortfolio() {
                 key={project.title}
                 className="bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:scale-105 transition duration-500 shadow-2xl"
               >
-                <h3 className="text-3xl font-semibold mb-5">
-                  {project.title}
-                </h3>
-
-                <p className="text-gray-300 leading-relaxed">
+                <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
                   {project.description}
                 </p>
+
+                
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CERTIFICATIONS */}
-      <section className="max-w-7xl mx-auto py-20 px-6">
-        <h2 className="text-4xl font-bold mb-10">Certifications</h2>
+      {/* Publications */}
+      <section className="max-w-6xl mx-auto py-16 px-6">
+        <div className="mb-8">
+          <h2 className="text-4xl font-bold mb-3">Research Publications</h2>
+          <p className="text-gray-500 text-lg">
+            Published research contributions in AI, machine learning, IoT, and healthcare systems.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-lg p-8">
+          <ul className="space-y-4 list-disc pl-6 text-gray-700">
+            {publications.map((publication) => (
+              <li key={publication}>{publication}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Education & Certifications */}
+      <section className="max-w-6xl mx-auto py-10 px-6 grid md:grid-cols-2 gap-8">
+        <div className="bg-white rounded-3xl shadow-lg p-8">
+          <h2 className="text-3xl font-bold mb-6">Education</h2>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold">
+                George Mason University
+              </h3>
+              <p className="text-gray-600">
+                M.S. Computer Science and Engineering
+              </p>
+              <p className="text-gray-500">GPA: 3.54 / 4.0</p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Anna University</h3>
+              <p className="text-gray-600">
+                M.E. Computer Science and Engineering
+              </p>
+              <p className="text-gray-500">GPA: 3.6 / 4.0</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-lg p-8">
+          <h2 className="text-3xl font-bold mb-6">Certifications</h2>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">
+              The Complete Tableau Bootcamp for Aspiring Data Scientists
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Gained hands-on experience in data visualization, dashboard
+              creation, interactive charts, and business data analysis using
+              Tableau.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="max-w-6xl mx-auto py-16 px-6">
+        <h2 className="text-3xl font-bold mb-10">Certifications</h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           {certifications.map((cert) => (
             <div
               key={cert.title}
-              className="bg-white p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300"
+              className="bg-white p-8 rounded-3xl shadow-lg hover:scale-105 transition duration-300"
             >
-              <h3 className="text-2xl font-semibold mb-4">{cert.title}</h3>
+              <h3 className="text-2xl font-semibold mb-3 text-slate-900">
+                {cert.title}
+              </h3>
 
               <p className="text-blue-600 font-medium mb-4">
                 {cert.provider}
@@ -335,42 +403,32 @@ export default function SuvarnaPortfolio() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-gradient-to-r from-slate-950 to-black text-white py-16 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Let’s Build Something Great Together
-          </h2>
-
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-8">
-            Actively seeking Software Engineering opportunities in the United
-            States and excited to contribute technical expertise and innovation
-            to impactful teams.
+      {/* Footer */}
+      <footer className="bg-gradient-to-r from-slate-950 to-black text-white py-14 px-6 mt-16">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-4">Let’s Build Something Great Together</h2>
+          <p className="text-gray-300 mb-6">
+            Actively seeking Software Engineering opportunities in the United States and excited to contribute technical expertise, innovation, and strong problem-solving skills to impactful teams.
           </p>
 
-          <div className="flex justify-center gap-4 flex-wrap">
+          <div className="flex justify-center gap-6 flex-wrap">
             <a
-              href="mailto:suvarnaadityan@gmail.com"
-              className="bg-white text-slate-900 px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition"
+              href="mailto:suvarnaadityan@gmail.com?subject=Job%20Opportunity&body=Hello%20Suvarna,"
+              className="bg-white text-slate-900 px-5 py-3 rounded-2xl font-semibold"
             >
               Email Me
             </a>
 
             <a
-              href="tel:+15715551234"
-              className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-slate-900 transition"
+              href="https://www.linkedin.com/in/suvarnaramu"
+              target="_blank"
+              className="border border-white px-5 py-3 rounded-2xl font-semibold"
             >
-              Call Me
+              LinkedIn Profile
             </a>
           </div>
 
-          <div className="mt-10 text-gray-400 space-y-2">
-            <p>Email: suvarnaadityan@gmail.com</p>
-            <p>Location: Manassas, Virginia, USA</p>
-            <p>LinkedIn: linkedin.com/in/suvarnaramu</p>
-          </div>
-
-          <p className="mt-10 text-gray-500 text-sm">
+          <p className="text-gray-500 mt-8 text-sm">
             © 2026 Suvarna Ramu. All rights reserved.
           </p>
         </div>
