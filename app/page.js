@@ -149,16 +149,7 @@ export default function SuvarnaPortfolio() {
               </a>
             </p>
             <p>Address: 8401 Rosebay Ln, Manassas, Virginia, USA</p>
-            <p>
-              LinkedIn:
-              <a
-                href="https://www.linkedin.com/in/suvarnaramu"
-                target="_blank"
-                className="text-blue-300 hover:underline ml-2"
-              >
-                linkedin.com/in/suvarnaramu
-              </a>
-            </p>
+            
           </div>
           </div>
 
