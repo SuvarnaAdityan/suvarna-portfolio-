@@ -419,16 +419,26 @@ export default function SuvarnaPortfolio() {
         <div className="bg-white rounded-3xl shadow-lg p-8">
           <h2 className="text-3xl font-bold mb-6">Certifications</h2>
 
-          <div>
-            <h3 className="text-xl font-semibold mb-2">
-              The Complete Tableau Bootcamp for Aspiring Data Scientists
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              Gained hands-on experience in data visualization, dashboard
-              creation, interactive charts, and business data analysis using
-              Tableau.
-            </p>
-          </div>
+          {certifications.map((cert) => (
+            <div key={cert.title}>
+              <h3 className="text-xl font-semibold mb-2">
+                {cert.title}
+              </h3>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                {cert.description}
+              </p>
+
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold hover:scale-105 transition"
+              >
+                View Certification
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 
