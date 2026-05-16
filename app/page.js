@@ -3,13 +3,14 @@ import React from "react";
 
 export default function SuvarnaPortfolio() {
   const certifications = [
-    {
-      title: "The Complete Tableau Bootcamp for Aspiring Data Scientists",
-      provider: "Coursera",
-      description:
-        "Hands-on experience in data visualization, dashboard creation, charts, filters, and business analytics using Tableau.",
-    },
-  ];
+  {
+    title: "The Complete Tableau Bootcamp for Aspiring Data Scientists",
+    provider: "Coursera",
+    link: "https://coursera.org/verify/6NPF0BX7RLFD",
+    description:
+      "Hands-on experience in data visualization, dashboard creation, charts, filters, and business analytics using Tableau.",
+  },
+];
 
   
 
@@ -449,9 +450,18 @@ export default function SuvarnaPortfolio() {
                 {cert.provider}
               </p>
 
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-6">
                 {cert.description}
               </p>
+
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold hover:scale-105 transition"
+              >
+                View Certification
+              </a>
             </div>
           ))}
         </div>
