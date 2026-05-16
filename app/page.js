@@ -13,7 +13,7 @@ export default function SuvarnaPortfolio() {
 
   
 
-  const resumeLink = "/resume.pdf";
+  const resumeLink = "https://drive.google.com/file/d/1PvwtrOEaXlFYn3cAPCz1X8VEOFHBJzpy/view?usp=sharing";
 
   const [darkMode, setDarkMode] = React.useState(false);
   const skills = {
@@ -105,7 +105,7 @@ export default function SuvarnaPortfolio() {
 
               <a
                 href={resumeLink}
-                download
+                target="_blank"
                 className="bg-blue-500 text-white px-5 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
               >
                 Download Resume
