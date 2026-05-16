@@ -18,7 +18,7 @@ export default function SuvarnaPortfolio() {
   const [darkMode, setDarkMode] = React.useState(false);
   const skills = {
     languages: ["HTML", "CSS", "JavaScript", "C", "C++", "Python", "Java"],
-    frameworks: ["Git", "Eclipse", "NumPy", "pandas", "Matplotlib", "PyTorch", "TensorFlow", "Keras", "Scikit-learn"],
+    frameworks: ["Git", "Eclipse", "Visual Studio", "Packet Tracer", "NumPy", "pandas", "Matplotlib", "PyTorch", "TensorFlow", "Keras", "Scikit-learn"],
     databases: ["SQL", "Python Data Querying"],
     systems: ["Windows", "Linux"],
   };
@@ -63,11 +63,42 @@ export default function SuvarnaPortfolio() {
   ];
 
   const publications = [
-    "Review of Feature Selection Methods and Semi Supervised Feature Selection Algorithms for Classification",
-    "Context Aware Physical Activity Recognition Using Social Objects",
-    "Credit Card Fraud Detection Using Federated Learning Techniques",
-    "Critical Care Monitoring with Event Prioritization Using IoT"
-  ];
+  {
+    title:
+      "Review of Feature Selection Methods and Semi Supervised Feature Selection Algorithms for Classification",
+    journal: "International Journal of Software Computing and Testing",
+    date: "August 7, 2020",
+    url: "https://computers.journalspub.info/index.php?journal=JSCT&page=article&op=view&path%5B%5D=598",
+    description:
+      "This paper presents an extensive preliminary understanding about feature selection and surveys recent semi-supervised feature selection methods to improve learning performance and algorithm selection.",
+  },
+  {
+    title: "Context Aware Physical Activity Recognition Using Social Objects",
+    journal: "International Journal of Computer Science and Programming Language",
+    date: "July 13, 2020",
+    url: "https://www.journalspub.com",
+    description:
+      "Proposed a smartphone-based activity recognition system capable of classifying human activities such as sitting, standing, walking, jogging, and stair movement without requiring external servers.",
+  },
+  {
+    title: "Credit Card Fraud Detection Using Federated Learning Techniques",
+    journal:
+      "International Journal of Scientific Research in Science, Engineering and Technology",
+    date: "June 11, 2020",
+    url: "https://ijsrset.com/IJSRSET207380",
+    description:
+      "Implemented Autoencoder and Restricted Boltzmann Machine algorithms within a federated learning framework to identify and predict fraudulent credit card users.",
+  },
+  {
+    title: "Critical Care Monitoring with Event Priorization Using IoT",
+    journal:
+      "International Journal of Scientific Research in Computer Science, Engineering and Information Technology",
+    date: "March 31, 2018",
+    url: "https://ijsrcseit.com/CSEIT1833436",
+    description:
+      "Designed a smart healthcare monitoring architecture using IoT to evaluate patient criticality, prioritize emergency data, and support caregivers and healthcare professionals with real-time monitoring.",
+  },
+];
 
   return (
     <div className={darkMode ? "min-h-screen bg-slate-950 text-white transition-all duration-500" : "min-h-screen bg-gray-100 text-gray-800 transition-all duration-500"}>
@@ -98,6 +129,8 @@ export default function SuvarnaPortfolio() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="mailto:suvarnaadityan@gmail.com?subject=Job%20Opportunity&body=Hello%20Suvarna,"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-slate-900 px-5 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
               >
                 Contact Me
@@ -134,6 +167,8 @@ export default function SuvarnaPortfolio() {
               Email:
               <a
                 href="mailto:suvarnaadityan@gmail.com?subject=Job%20Opportunity&body=Hello%20Suvarna,"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-300 hover:underline ml-2"
               >
                 suvarnaadityan@gmail.com
@@ -317,12 +352,40 @@ export default function SuvarnaPortfolio() {
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-lg p-8">
-          <ul className="space-y-4 list-disc pl-6 text-gray-700">
-            {publications.map((publication) => (
-              <li key={publication}>{publication}</li>
-            ))}
-          </ul>
+        <div className="grid md:grid-cols-2 gap-8">
+          {publications.map((publication) => (
+            <div
+              key={publication.title}
+              className="bg-white rounded-3xl shadow-xl p-8 hover:-translate-y-2 transition duration-300 border border-gray-100"
+            >
+              <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-snug">
+                {publication.title}
+              </h3>
+
+              <div className="space-y-2 mb-5">
+                <p className="text-blue-700 font-semibold">
+                  {publication.journal}
+                </p>
+
+                <p className="text-gray-500 font-medium">
+                  Published: {publication.date}
+                </p>
+              </div>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                {publication.description}
+              </p>
+
+              <a
+                href={publication.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold hover:scale-105 transition"
+              >
+                View Publication
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -405,6 +468,8 @@ export default function SuvarnaPortfolio() {
           <div className="flex justify-center gap-6 flex-wrap">
             <a
               href="mailto:suvarnaadityan@gmail.com?subject=Job%20Opportunity&body=Hello%20Suvarna,"
+                target="_blank"
+                rel="noopener noreferrer"
               className="bg-white text-slate-900 px-5 py-3 rounded-2xl font-semibold"
             >
               Email Me
