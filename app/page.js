@@ -442,41 +442,6 @@ export default function SuvarnaPortfolio() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="max-w-6xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold mb-10">Certifications</h2>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {certifications.map((cert) => (
-            <div
-              key={cert.title}
-              className="bg-white p-8 rounded-3xl shadow-lg hover:scale-105 transition duration-300"
-            >
-              <h3 className="text-2xl font-semibold mb-3 text-slate-900">
-                {cert.title}
-              </h3>
-
-              <p className="text-blue-600 font-medium mb-4">
-                {cert.provider}
-              </p>
-
-              <p className="text-gray-700 leading-relaxed mb-6">
-                {cert.description}
-              </p>
-
-              <a
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold hover:scale-105 transition"
-              >
-                View Certification
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gradient-to-r from-slate-950 to-black text-white py-14 px-6 mt-16">
         <div className="max-w-6xl mx-auto text-center">
