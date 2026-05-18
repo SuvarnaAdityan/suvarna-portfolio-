@@ -47,20 +47,22 @@ export default function SuvarnaPortfolio() {
         "Provided qualification support for memory chips using PINE and RDX boards.",
         "Reduced failure rates by 15% through detailed testing and analysis."
       ]
-    }
+    },
   ];
 
   const projects = [
     {
       title: "Credit Card Fraud Detection using Deep Learning Techniques",
       description:
-        "Built a backend fraud detection system with a web interface using Python and deep learning models. Achieved 96%–99% prediction accuracy using Auto-encoders and RBM algorithms."
+        "Built a backend fraud detection system with a web interface using Python and deep learning models. Achieved 96%–99% prediction accuracy using Auto-encoders and RBM algorithms.",
+        github: "https://github.com/SuvarnaAdityan/credit-card-fraud-detection",
     },
     {
       title: "Social Network Analysis Using Centrality Measures",
       description:
-        "Created an interactive web application for social network visualization using JavaScript libraries and improved data processing efficiency by 15 hours per month."
-    }
+        "Created an interactive web application for social network visualization using JavaScript libraries and improved data processing efficiency by 15 hours per month.",
+      github: "https://github.com/SuvarnaAdityan/social-network-analysis-centrality",
+    },
   ];
 
   const publications = [
@@ -70,6 +72,8 @@ export default function SuvarnaPortfolio() {
     journal: "International Journal of Software Computing and Testing",
     date: "August 7, 2020",
     url: "https://computers.journalspub.info/index.php?journal=JSCT&page=article&op=view&path%5B%5D=598",
+    github:
+      "https://github.com/SuvarnaAdityan/semi-supervised-feature-selection",
     description:
       "This paper presents an extensive preliminary understanding about feature selection and surveys recent semi-supervised feature selection methods to improve learning performance and algorithm selection.",
   },
@@ -78,6 +82,7 @@ export default function SuvarnaPortfolio() {
     journal: "International Journal of Computer Science and Programming Language",
     date: "July 13, 2020",
     url: "https://www.journalspub.com",
+    github: "https://github.com/SuvarnaAdityan/physical-activity-recognition-smartphone",
     description:
       "Proposed a smartphone-based activity recognition system capable of classifying human activities such as sitting, standing, walking, jogging, and stair movement without requiring external servers.",
   },
@@ -87,6 +92,7 @@ export default function SuvarnaPortfolio() {
       "International Journal of Scientific Research in Science, Engineering and Technology",
     date: "June 11, 2020",
     url: "https://ijsrset.com/IJSRSET207380",
+    github: "https://github.com/SuvarnaAdityan/credit-card-fraud-federated-learning",
     description:
       "Implemented Autoencoder and Restricted Boltzmann Machine algorithms within a federated learning framework to identify and predict fraudulent credit card users.",
   },
@@ -96,6 +102,7 @@ export default function SuvarnaPortfolio() {
       "International Journal of Scientific Research in Computer Science, Engineering and Information Technology",
     date: "March 31, 2018",
     url: "https://ijsrcseit.com/CSEIT1833436",
+    github: "https://github.com/SuvarnaAdityan/critical-care-monitoring-iot",
     description:
       "Designed a smart healthcare monitoring architecture using IoT to evaluate patient criticality, prioritize emergency data, and support caregivers and healthcare professionals with real-time monitoring.",
   },
@@ -336,6 +343,14 @@ export default function SuvarnaPortfolio() {
                 <p className="text-gray-300 leading-relaxed mb-6">
                   {project.description}
                 </p>
+                <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-slate-900 px-5 py-3 rounded-2xl font-semibold hover:scale-105 transition"
+                >
+                  View GitHub Project
+                </a>
 
                 
               </div>
@@ -377,14 +392,25 @@ export default function SuvarnaPortfolio() {
                 {publication.description}
               </p>
 
-              <a
-                href={publication.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold hover:scale-105 transition"
-              >
-                View Publication
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <a
+                 href={publication.url}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="inline-block bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold hover:scale-105 transition"
+                 >
+                  View Publication
+                </a>
+                
+                 <a
+                  href={publication.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block border border-slate-900 text-slate-900 px-5 py-3 rounded-2xl font-semibold hover:bg-slate-900 hover:text-white transition"
+                 >
+                  GitHub 
+                </a>
+              </div>
             </div>
           ))}
         </div>
