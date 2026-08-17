@@ -193,7 +193,7 @@ export default function SuvarnaPortfolio() {
                 <span className="font-semibold text-white">University:</span> George Mason University
               </div>
               <div>
-                <span className="font-semibold text-white">GPA:</span> 3.54 / 4.0
+                <span className="font-semibold text-white">GPA:</span> 3.63 / 4.0
               </div>
               <div>
                 <span className="font-semibold text-white">Actively Seeking:</span> Software Engineering, Frontend Development, QA Automation, and AI/ML opportunities across the United States
@@ -413,7 +413,7 @@ export default function SuvarnaPortfolio() {
               <p className="text-gray-600">
                 M.S. Computer Science and Engineering
               </p>
-              <p className="text-gray-500">GPA: 3.54 / 4.0</p>
+              <p className="text-gray-500">GPA: 3.63 / 4.0</p>
             </div>
 
             <div>
