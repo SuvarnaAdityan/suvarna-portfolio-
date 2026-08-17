@@ -146,7 +146,7 @@ export default function SuvarnaPortfolio() {
 
               <a
                 href={resumeLink}
-                download="resume.pdf"
+                download="Suvarna_Ramu_Resume_US.pdf"
                 className="bg-blue-500 text-white px-5 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition"
               >
                 Download Resume
@@ -161,13 +161,6 @@ export default function SuvarnaPortfolio() {
               >
                 LinkedIn
               </a>
-
-            <a
-              href="tel:+15715551234"
-              className="border border-white px-5 py-3 rounded-2xl font-semibold"
-            >
-              Call Me
-            </a>
           </div>
 
           <div className="mt-8 text-gray-300 space-y-2">
@@ -180,15 +173,6 @@ export default function SuvarnaPortfolio() {
                 className="text-blue-300 hover:underline ml-2"
               >
                 suvarnaadityan@gmail.com
-              </a>
-            </p>
-            <p>
-              Phone:
-              <a
-                href="tel:+15715551234"
-                className="text-blue-300 hover:underline ml-2"
-              >
-                +1 (571) 555-1234
               </a>
             </p>
             <p>Address: 8401 Rosebay Ln, Manassas, Virginia, USA</p>
